@@ -222,5 +222,5 @@ async function fetchAIApi(query) {
     body: JSON.stringify({query: query})
   });
   const data = await response.json()
-  return data?.content
+  return data?.content?.[0] + data?.content
 }
