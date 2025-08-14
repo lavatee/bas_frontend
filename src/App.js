@@ -214,7 +214,7 @@ function AIChat() {
 }
 
 async function fetchAIApi(query) {
-  const response = await fetch("/api/question", {
+  const response = await fetch("/api/query", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
