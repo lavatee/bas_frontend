@@ -219,7 +219,7 @@ async function fetchAIApi(query) {
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({question: query})
+    body: JSON.stringify({query: query})
   });
   const data = await response.json()
   return data?.content
