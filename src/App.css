@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background-color: #19181D;
+  font-family: "Golos Text", sans-serif;
+}
+.userMessage {
+  margin-top: 1vh;
+  margin-left: 40%;
+  width: 50%;
+  background-color: #D81696;
+  color: white;
+  overflow-wrap: break-word;
+  padding: 10px;
+  border-radius: 10px 10px 0px 10px;
+}
+li {
+  list-style: none;
+}
+.botMessage {
+  margin-top: 1vh;
+  margin-left: 10%;
+  width: 50%;
+  background-color: #383642;
+  color: white;
+  overflow-wrap: break-word;
+  padding: 10px;
+  border-radius: 10px 10px 10px 0px;
+}
+.botMessage h4 {
+  font-weight: 500;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dot {
+  width: 20px;
+  color: white;
+  animation: blink 1.4s infinite both;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 20% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  width: 100vw;
+  height: 10vh;
+  background-color: #383642;
+  border-bottom: solid 2px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: fixed;
+  z-index: 999;
+}
+textarea {
+  padding: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0C0A12;
+  outline: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  background-color: #D81696;
+  border: solid 5px #D81696;
+  font-weight: 750;
+  color: white;
+  font-size: 18px;
+  transition-duration: 200ms;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  cursor: pointer;
+  background-color: #FF3DBD;
+  color: white;
+  transition-duration: 200ms;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1, h2 {
+  color: white;
 }

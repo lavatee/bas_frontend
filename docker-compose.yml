@@ -1,0 +1,21 @@
+version: '3.8'
+networks:
+  app:
+services:
+  frontend:
+    build: 
+      context: .
+    networks:
+      - app
+    ports:
+      - 3000:3000
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - frontend
+    networks:
+      - app
